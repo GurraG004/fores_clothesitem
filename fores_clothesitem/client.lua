@@ -36,7 +36,7 @@ local hakteklader = {
             ['mask_1'] = 0, ['mask_2'] = 0,
       }
     }
-    local sjukhusklaer = {
+    local sjukhusklader = {
         male = {
                 ['tshirt_1'] = 15,  ['tshirt_2'] = 0,
                 ['torso_1'] = 104,   ['torso_2'] = 0,
@@ -91,9 +91,9 @@ AddEventHandler('foresoperationsklader', function ()
     TaskPlayAnim(ped, "missmic4", "michael_tux_fidget", 5.0, 1.0, -1, 50, 0, 0, 0, 0 )
         ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin)
             if skin.sex == 0 then
-                TriggerEvent('skinchanger:loadClothes', skin, sjukhusklaer.male)
+                TriggerEvent('skinchanger:loadClothes', skin, sjukhusklader.male)
             else
-                TriggerEvent('skinchanger:loadClothes', skin, sjukhusklaer.female)
+                TriggerEvent('skinchanger:loadClothes', skin, sjukhusklader.female)
             end
         end)
         Citizen.Wait(2000)
